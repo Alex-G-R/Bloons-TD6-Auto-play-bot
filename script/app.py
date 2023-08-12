@@ -173,65 +173,66 @@ def upgradesSpike():
                 runningIV = False
         print("Spike done")
         #upgradesPlane()
-        upgradesPlane()
+        goToMenu()
     else:
         print("[-]upgrade error.")
 
-def upgradesPlane():
-    time.sleep(20)
-    x, y = pyautogui.locateCenterOnScreen("./images/plane.png", confidence=0.8)
-    click(x,y)
-    time.sleep(0.5)
-    x2, y2 = pyautogui.locateCenterOnScreen("./images/planeSpot.png", confidence=0.8)
-    click(x2,y2)
-    time.sleep(4)
-    planeRun = True
-    planeRunRapidI = True
-    planeRunRapidII = True
-    planeRunSharpI = True
-    planeRunSharpII = True
-    planeRunSharpIII = True
-    while planeRun:
-        if pyautogui.locateOnScreen("./images/planeRunWay.png", confidence=0.8, grayscale=True) != None:
-            x3, y3 = pyautogui.locateCenterOnScreen("./images/planeRunWay.pngg", confidence=0.8)
-            click(x3,y3)
-            time.sleep(0.5)
-            planeRun = False
-    while planeRunRapidI:
-        if pyautogui.locateOnScreen("./images/planeRapidI.png", confidence=0.8, grayscale=True) != None:
-            x4, y4 = pyautogui.locateCenterOnScreen("./images/planeRapidI.png", confidence=0.8)
-            click(x4,y4)
-            time.sleep(0.5)
-            planeRunRapidI = False
-
-    while planeRunRapidII:
-        if pyautogui.locateOnScreen("./images/planeRapidII.png", confidence=0.8, grayscale=True) != None:
-            x5, y5 = pyautogui.locateCenterOnScreen("./images/planeRapidII.png", confidence=0.8)
-            click(x5,y5)
-            time.sleep(0.5)
-            planeRunRapidII = False
-    
-    while planeRunSharpI:
-        if pyautogui.locateOnScreen("./images/planeSharpI.png", confidence=0.8, grayscale=True) != None:
-            x6, y6 = pyautogui.locateCenterOnScreen("./images/planeSharpI.png", confidence=0.8)
-            click(x6,y6)
-            time.sleep(0.5)
-            planeRunSharpI = False
-
-    while planeRunSharpII:
-        if pyautogui.locateOnScreen("./images/planeSharpII.png", confidence=0.8, grayscale=True) != None:
-            x6, y6 = pyautogui.locateCenterOnScreen("./images/planeSharpII.png", confidence=0.8)
-            click(x6,y6)
-            time.sleep(0.5)
-            planeRunSharpII = False
-
-    while planeRunSharpIII:
-        if pyautogui.locateOnScreen("./images/planeSharpIII.png", confidence=0.8, grayscale=True) != None:
-            x8, y8 = pyautogui.locateCenterOnScreen("./images/planeSharpIII.png", confidence=0.8)
-            click(x8,y8)
-            time.sleep(0.5)
-            planeRunSharpIII = False
-            goToMenu()
+# Plane not needed tho
+#def upgradesPlane():
+#    time.sleep(20)
+#    x, y = pyautogui.locateCenterOnScreen("./images/plane.png", confidence=0.8)
+#    click(x,y)
+#    time.sleep(0.5)
+#    x2, y2 = pyautogui.locateCenterOnScreen("./images/planeSpot.png", confidence=0.8)
+#    click(x2,y2)
+#    time.sleep(4)
+#    planeRun = True
+#    planeRunRapidI = True
+#    planeRunRapidII = True
+#    planeRunSharpI = True
+#    planeRunSharpII = True
+#    planeRunSharpIII = True
+#    while planeRun:
+#        if pyautogui.locateOnScreen("./images/planeRunWay.png", confidence=0.8, grayscale=True) != None:
+#            x3, y3 = pyautogui.locateCenterOnScreen("./images/planeRunWay.pngg", confidence=0.8)
+#            click(x3,y3)
+#            time.sleep(0.5)
+#            planeRun = False
+#    while planeRunRapidI:
+#        if pyautogui.locateOnScreen("./images/planeRapidI.png", confidence=0.8, grayscale=True) != None:
+#            x4, y4 = pyautogui.locateCenterOnScreen("./images/planeRapidI.png", confidence=0.8)
+#            click(x4,y4)
+#            time.sleep(0.5)
+#            planeRunRapidI = False
+#
+#    while planeRunRapidII:
+#        if pyautogui.locateOnScreen("./images/planeRapidII.png", confidence=0.8, grayscale=True) != None:
+#            x5, y5 = pyautogui.locateCenterOnScreen("./images/planeRapidII.png", confidence=0.8)
+#            click(x5,y5)
+#            time.sleep(0.5)
+#            planeRunRapidII = False
+#    
+#    while planeRunSharpI:
+#        if pyautogui.locateOnScreen("./images/planeSharpI.png", confidence=0.8, grayscale=True) != None:
+#            x6, y6 = pyautogui.locateCenterOnScreen("./images/planeSharpI.png", confidence=0.8)
+#            click(x6,y6)
+#            time.sleep(0.5)
+#            planeRunSharpI = False
+#
+#    while planeRunSharpII:
+#        if pyautogui.locateOnScreen("./images/planeSharpII.png", confidence=0.8, grayscale=True) != None:
+#            x6, y6 = pyautogui.locateCenterOnScreen("./images/planeSharpII.png", confidence=0.8)
+#            click(x6,y6)
+#            time.sleep(0.5)
+#            planeRunSharpII = False
+#
+#    while planeRunSharpIII:
+#        if pyautogui.locateOnScreen("./images/planeSharpIII.png", confidence=0.8, grayscale=True) != None:
+#            x8, y8 = pyautogui.locateCenterOnScreen("./images/planeSharpIII.png", confidence=0.8)
+#            click(x8,y8)
+#            time.sleep(0.5)
+#            planeRunSharpIII = False
+#            goToMenu()
 
 
 
@@ -270,15 +271,6 @@ canvas.create_window(195, 33, window=startBot)
 #Stop the bot
 stopBot = tk.Button(root, text="Stop the Bot",command=none, padx=10, pady = 5, fg="white", bg="gray", height=2, width=50)
 canvas.create_window(195, 468, window=stopBot)
-
-#autoUpgradeCastle = tk.Button(root, text="Something", command=none, fg="white", bg="gray", height=2, width=25)
-#canvas.create_window(100, 415, window=autoUpgradeCastle)
-#
-#autoUpgrade = tk.Button(root, text="Something", command=none, fg="white", bg="gray", height=2, width=25)
-#canvas.create_window(290, 415, window=autoUpgrade)
-#
-#autoChest = tk.Button(root, text="Something", command=none, fg="white", bg="gray", height=2, width=52)
-#canvas.create_window(195, 367, window=autoChest)
 
 output_text = tk.Text(root, height=30, width=50, fg="white", bg="black")
 canvas.create_window(590, 250, window=output_text)
